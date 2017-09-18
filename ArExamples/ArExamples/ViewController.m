@@ -394,6 +394,20 @@
     
     //TODO: wantsHdr
 }
+- (void)insertSpotLight:(SCNVector3)position {
+    SCNLight *spotLight = [SCNLight light];
+    spotLight.type = SCNLightTypeSpot;
+    spotLight.spotInnerAngle = 45;
+    spotLight.spotOuterAngle = 45;
+    SCNNode *spotNode = [SCNNode new];
+    spotNode.light = spotLight;
+    spotNode.position = position;
+    // By default the stop light points directly down the negative
+    // z-axis, we want to shine it down so rotate 90deg around the
+    // x-axis to point it down
+    spotNode.eulerAngles = SCNVector3Make(-M_PI / 2, 0, 0);
+    [self.sceneView.scene.rootNode addChildNode: spotNode];
+}
 
 - (void)setupRecognizers {
     // Single tap will insert a new piece of geometry into the scene
@@ -549,10 +563,11 @@
                                          hitResult.worldTransform.columns[3].y + insertionYOffset,
                                          hitResult.worldTransform.columns[3].z
                                          );
-    
     Cube *cube = [[Cube alloc] initAtPosition:position withMaterial:[Cube currentMaterial]];
     [self.cubes addObject:cube];
     [self.sceneView.scene.rootNode addChildNode:cube];
+    
+//    [self insertSpotLight:position];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
