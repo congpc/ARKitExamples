@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		0044C6971F6F5ED6004A963E /* Plane.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044C6941F6F5EC8004A963E /* Plane.m */; };
 		0044C6981F6F5ED9004A963E /* tron_grid.png in Resources */ = {isa = PBXBuildFile; fileRef = 0044C6961F6F5EC8004A963E /* tron_grid.png */; };
+		0044C69C1F6F7CE4004A963E /* ConfigViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044C69A1F6F7CE3004A963E /* ConfigViewController.m */; };
+		0044C6A31F6F7CFD004A963E /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044C69F1F6F7CFD004A963E /* Config.m */; };
+		0044C6A41F6F7CFD004A963E /* Cube.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044C6A11F6F7CFD004A963E /* Cube.m */; };
+		0044C6A51F6F7CFD004A963E /* PBRMaterial.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044C6A21F6F7CFD004A963E /* PBRMaterial.m */; };
+		0044C6A71F6F7FEB004A963E /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 0044C6A61F6F7DDA004A963E /* Assets.scnassets */; };
 		00E7396F1F6BC61000471810 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E7396E1F6BC61000471810 /* AppDelegate.m */; };
 		00E739711F6BC61000471810 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 00E739701F6BC61000471810 /* art.scnassets */; };
 		00E739741F6BC61000471810 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E739731F6BC61000471810 /* ViewController.m */; };
@@ -41,6 +46,16 @@
 		0044C6931F6F5EC8004A963E /* Plane.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Plane.h; sourceTree = "<group>"; };
 		0044C6941F6F5EC8004A963E /* Plane.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Plane.m; sourceTree = "<group>"; };
 		0044C6961F6F5EC8004A963E /* tron_grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tron_grid.png; sourceTree = "<group>"; };
+		0044C6991F6F7CE3004A963E /* ConfigViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfigViewController.h; sourceTree = "<group>"; };
+		0044C69A1F6F7CE3004A963E /* ConfigViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfigViewController.m; sourceTree = "<group>"; };
+		0044C69B1F6F7CE4004A963E /* CollisionCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollisionCategory.h; sourceTree = "<group>"; };
+		0044C69D1F6F7CFD004A963E /* Cube.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
+		0044C69E1F6F7CFD004A963E /* PBRMaterial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PBRMaterial.h; sourceTree = "<group>"; };
+		0044C69F1F6F7CFD004A963E /* Config.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		0044C6A01F6F7CFD004A963E /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		0044C6A11F6F7CFD004A963E /* Cube.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cube.m; sourceTree = "<group>"; };
+		0044C6A21F6F7CFD004A963E /* PBRMaterial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PBRMaterial.m; sourceTree = "<group>"; };
+		0044C6A61F6F7DDA004A963E /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		00E7396A1F6BC61000471810 /* ArExamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArExamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E7396D1F6BC61000471810 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		00E7396E1F6BC61000471810 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +105,12 @@
 			children = (
 				0044C6931F6F5EC8004A963E /* Plane.h */,
 				0044C6941F6F5EC8004A963E /* Plane.m */,
+				0044C6A01F6F7CFD004A963E /* Config.h */,
+				0044C69F1F6F7CFD004A963E /* Config.m */,
+				0044C69D1F6F7CFD004A963E /* Cube.h */,
+				0044C6A11F6F7CFD004A963E /* Cube.m */,
+				0044C69E1F6F7CFD004A963E /* PBRMaterial.h */,
+				0044C6A21F6F7CFD004A963E /* PBRMaterial.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,7 +153,11 @@
 				00E739701F6BC61000471810 /* art.scnassets */,
 				00E739721F6BC61000471810 /* ViewController.h */,
 				00E739731F6BC61000471810 /* ViewController.m */,
+				0044C69B1F6F7CE4004A963E /* CollisionCategory.h */,
+				0044C6991F6F7CE3004A963E /* ConfigViewController.h */,
+				0044C69A1F6F7CE3004A963E /* ConfigViewController.m */,
 				00E739751F6BC61000471810 /* Main.storyboard */,
+				0044C6A61F6F7DDA004A963E /* Assets.scnassets */,
 				00E739781F6BC61000471810 /* Assets.xcassets */,
 				00E7397A1F6BC61000471810 /* LaunchScreen.storyboard */,
 				00E7397D1F6BC61000471810 /* Info.plist */,
@@ -265,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0044C6A71F6F7FEB004A963E /* Assets.scnassets in Resources */,
 				00E739711F6BC61000471810 /* art.scnassets in Resources */,
 				00E7397C1F6BC61000471810 /* LaunchScreen.storyboard in Resources */,
 				00E739791F6BC61000471810 /* Assets.xcassets in Resources */,
@@ -295,9 +321,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				00E739741F6BC61000471810 /* ViewController.m in Sources */,
+				0044C6A31F6F7CFD004A963E /* Config.m in Sources */,
 				00E7397F1F6BC61000471810 /* main.m in Sources */,
+				0044C6A51F6F7CFD004A963E /* PBRMaterial.m in Sources */,
+				0044C69C1F6F7CE4004A963E /* ConfigViewController.m in Sources */,
 				0044C6971F6F5ED6004A963E /* Plane.m in Sources */,
 				00E7396F1F6BC61000471810 /* AppDelegate.m in Sources */,
+				0044C6A41F6F7CFD004A963E /* Cube.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

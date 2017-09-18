@@ -18,10 +18,19 @@
 //@property (nonatomic, retain) SCNPlane *planeGeometry;
 
 //Part3
-- (instancetype)initWithAnchor:(ARPlaneAnchor *)anchor isHidden:(BOOL)hidden;
+//- (instancetype)initWithAnchor:(ARPlaneAnchor *)anchor isHidden:(BOOL)hidden;
+//- (void)update:(ARPlaneAnchor *)anchor;
+//- (void)setTextureScale;
+//- (void)hide;
+//@property (nonatomic,retain) ARPlaneAnchor *anchor;
+//@property (nonatomic, retain) SCNBox *planeGeometry;
+
+- (instancetype)initWithAnchor:(ARPlaneAnchor *)anchor isHidden:(BOOL)hidden withMaterial:(SCNMaterial *)material;
 - (void)update:(ARPlaneAnchor *)anchor;
 - (void)setTextureScale;
 - (void)hide;
+- (void)changeMaterial;
++ (SCNMaterial *)currentMaterial;
 @property (nonatomic,retain) ARPlaneAnchor *anchor;
 @property (nonatomic, retain) SCNBox *planeGeometry;
 @end
