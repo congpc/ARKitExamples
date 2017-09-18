@@ -11,7 +11,7 @@
 #import "CollisionCategory.h"
 #import "PBRMaterial.h"
 
-static int currentMaterialIndex = 0;
+static int currentMaterialIndex = 3;
 
 @implementation Cube
 

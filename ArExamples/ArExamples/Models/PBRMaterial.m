@@ -25,10 +25,13 @@ static NSMutableDictionary *materials;
   
   mat = [SCNMaterial new];
   mat.lightingModelName = SCNLightingModelPhysicallyBased;
-  mat.diffuse.contents = [UIImage imageNamed:[NSString stringWithFormat:@"./Assets.scnassets/Materials/%@/%@-albedo.png", name, name]];
-  mat.roughness.contents = [UIImage imageNamed:[NSString stringWithFormat:@"./Assets.scnassets/Materials/%@/%@-roughness.png", name, name]];
-  mat.metalness.contents = [UIImage imageNamed:[NSString stringWithFormat:@"./Assets.scnassets/Materials/%@/%@-metal.png", name, name]];
-  mat.normal.contents = [UIImage imageNamed:[NSString stringWithFormat:@"./Assets.scnassets/Materials/%@/%@-normal.png", name, name]];
+  UIImage* albedoImg = [UIImage imageNamed:[NSString stringWithFormat:@"../Assets.scnassets/Materials/%@/%@-albedo.png", name, name]];
+  
+  mat.diffuse.contents = albedoImg;
+  mat.roughness.contents = [UIImage imageNamed:[NSString stringWithFormat:@"../Assets.scnassets/Materials/%@/%@-roughness.png", name, name]];
+  mat.metalness.contents = [UIImage imageNamed:[NSString stringWithFormat:@"../Assets.scnassets/Materials/%@/%@-metal.png", name, name]];
+  mat.normal.contents = [UIImage imageNamed:[NSString stringWithFormat:@"../Assets.scnassets/Materials/%@/%@-normal.png", name, name]];
+  
   mat.diffuse.wrapS = SCNWrapModeRepeat;
   mat.diffuse.wrapT = SCNWrapModeRepeat;
   mat.roughness.wrapS = SCNWrapModeRepeat;

@@ -384,9 +384,13 @@
     // Turn off all the default lights SceneKit adds since we are handling it ourselves
     self.sceneView.autoenablesDefaultLighting = NO;
     self.sceneView.automaticallyUpdatesLighting = NO;
-    
+  
+    UIImage *bg = [UIImage imageNamed: @"./Assets.scnassets/Environment/spherical.jpg"];
+    self.sceneView.scene.background.contents = bg;
+  
     UIImage *env = [UIImage imageNamed: @"./Assets.scnassets/Environment/spherical.jpg"];
     self.sceneView.scene.lightingEnvironment.contents = env;
+    //self.sceneView.scene.lightingEnvironment.intensity = 2.0;
     
     //TODO: wantsHdr
 }
@@ -466,7 +470,7 @@
     SCNNode *parentNode = node.parentNode;
     if ([parentNode isKindOfClass:[Cube class]]) {
         [((Cube *)parentNode) changeMaterial];
-    } else {
+    } else if ([parentNode isKindOfClass:[Plane class]]) {
         [((Plane *)parentNode) changeMaterial];
     }
 }
